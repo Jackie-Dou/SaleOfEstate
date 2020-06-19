@@ -1,0 +1,27 @@
+body {
+    background-color:cornsilk;
+}
+
+.header{
+    font-family: 'Viaoda Libre';
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+.main_container{
+    width: 73%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.container{
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-size: 18px;
+}
