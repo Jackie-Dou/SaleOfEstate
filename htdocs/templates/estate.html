@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang = "ru"> 
+    <head> 
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="assets/css/style.css">  
+        <link href="https://fonts.googleapis.com/css?family=Viaoda+Libre&display=swap&subset=cyrillic" rel="stylesheet"> 
+        <title>VampirEmpire</title> 
+    </head> 
+    <header>
+       {% include "header_menu.html" %}       
+    </header>
+    
+    <body>    
+        {% include "menu.html" %}
+        <div class="catalog_table"> 
+ 
+                {% for data in estdata%}
+                    <div class="row">
+                        <div class="col-1-3"> <div class="img"> <a href="{{ data.ref }}"> <img class="img-1-3" src="{{ data.img }}"> </a> </div> </div>
+                        <div class="col-2-3"> <div class="lot_description"> {{ data.name }}</div> <div class="short_lot_text"> {{ data.text }} </div> </div>  
+                    </div>
+                {% endfor %}
+            
+            <div class="row">
+                {% include "footer.html" %}   
+            </div>
+        </div>
+        
+    
+    </body>   
+</html> 

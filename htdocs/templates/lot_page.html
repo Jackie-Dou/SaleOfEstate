@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang = "ru"> 
+    <head> 
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="assets/css/style.css">  
+        <link href="https://fonts.googleapis.com/css?family=Viaoda+Libre&display=swap&subset=cyrillic" rel="stylesheet"> 
+        <title>VampirEmpire</title> 
+    </head> 
+    <header>
+        {% include "header_menu.html" %}     
+    </header>
+    <body>    
+        {% include "menu.html" %}
+        <div class="catalog_table">  
+            
+            <div class="row">
+                <div class="img img_main"><img src='{{ mydata.main_img}}' width="500" height="620"> </div>
+                <div class="info_lot">
+                    {{  mydata.info }}
+                    <form>
+                        <p><input class="inspect_btn" type="submit" value="Заказать осмотр"></p>
+                    </form>
+                </div>
+            </div>              
+            <div class="row">
+                <div class="addict_info">
+                    <ul>
+                        <li>{{  mydata.year }}</li>
+                        <li>{{  mydata.num_rooms }}</li>
+                        <li>{{  mydata.etc }}</li>
+                    </ul>
+                </div>    
+            </div>            
+            <div class="row inter">
+                <div class="img"><img src='{{ mydata.img1}}' width="300" height="300"> </div>     
+                <div class="img"><img src='{{ mydata.img2}}' width="300" height="300"> </div>  
+                <div class="img"><img src='{{ mydata.img3}}' width="300" height="300"> </div>  
+            </div>
+            <div class="row">
+                {% include "footer.html" %}  
+            </div>   
+        </div>   
+    </body>   
+</html> 
